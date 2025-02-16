@@ -46,8 +46,7 @@ jobs:
         USERNAME: ${{ secrets.USERNAME }}
         DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
       run: |
-        rm -f $HOME/.ssh
-        mkdir -p $HOME/.ssh
+        mkdir -p ~/.ssh
         echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
 
